@@ -1,0 +1,14 @@
+# Site
+title: 'The Happy APP'
+subtitle: ''
+keywords: 'art, arte, app, happiness'
+
+# URL
+url: 'https://thehappyapp.art'
+baseurl: ''
+include: ['_pages']
+
+# Build settings
+markdown: kramdown
+port: 6883
+future: false
