@@ -9,6 +9,10 @@ html {
   font-size: 18px;
   margin: 0;
   padding: 0;
+
+  @include media-query(MOBILE) {
+    font-size: 14px;
+  }
 }
 
 body {
@@ -97,6 +101,10 @@ a {
     justify-content: center;
     align-self: center;
 
+    @include media-query(MOBILE) {
+      width: 95%;
+    }
+
     .signup-text {
       text-align: center;
     }
@@ -124,28 +132,33 @@ a {
   }
 
   .thankyou-container {
-    width: 25%;
-    min-width: 300px;
+    width: 360px;
     display: flex;
     flex-direction: row;
     align-self: center;
     align-items: baseline;
+    justify-content: space-between;
     box-sizing: border-box;
 
+    @include media-query(MOBILE) {
+      justify-content: center;
+    }
+
     .thankyou-text {
-      width: 80%;
-      height: 100%;
-      min-width: 260px;
-      margin-right: 24px;
+      width: 245px;
       font-size: 48px;
       font-family: $FONT-LOGO;
       text-align: right;
       text-transform: uppercase;
+
+      @include media-query(MOBILE) {
+        font-size: 24px;
+        width: 122px;
+      }
     }
   }
 
   .index-image, .index-arrows-image, .thankyou-image, .signup-button-image {
-    margin: 0 auto;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
@@ -165,6 +178,11 @@ a {
     padding-bottom: calc((55 / 107) * 20%);
     margin-left: 20%;
     background-image: url({{ site.baseurl }}/imgs/arrows.svg);
+
+    @include media-query(MOBILE) {
+      width: 50%;
+      padding-bottom: calc((55 / 107) * 50%);
+    }
   }
 
   .signup-button-image {
@@ -177,8 +195,12 @@ a {
   }
 
   .thankyou-image {
-    width: 20%;
-    padding-bottom: calc((233 / 177) * 20%);
+    width: 70px;
+    padding-bottom: calc((233 / 177) * 70px);
     background-image: url({{ site.baseurl }}/imgs/logo.svg);
+    @include media-query(MOBILE) {
+      width: 10%;
+      padding-bottom: calc((233 / 177) * 10%);
+    }
   }
 }
