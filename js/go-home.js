@@ -1,4 +1,4 @@
 ---
 layout: none
 ---
-window.location.href = '{{ site.baseurl }}/';
+window.location.replace = '{{ site.baseurl }}/';

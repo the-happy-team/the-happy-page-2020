@@ -20,3 +20,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700&family=Megrim&display=swap" rel="stylesheet">
 
 {% include favicon.html %}
+
+{% if page.title == '404' %}
+  <script src="{{ site.baseurl }}/js/go-home.js"></script>
+{% endif %}
