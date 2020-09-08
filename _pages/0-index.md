@@ -3,8 +3,11 @@ layout: home
 title: The Happy App
 permalink: /
 ---
-<div class="page-0-content">
-  <a href="{{ site.baseurl }}/1/">
-    <div class="page-0-image"></div>
-  </a>
+<div class="page-content">
+  <div class="index-container">
+    <div class="index-image"></div>
+    <div class="index-arrows-container">
+      <a href="{{ site.sabeurl }}/signup/" class="index-arrows-image"></a>
+    </div>
+  </div>
 </div>

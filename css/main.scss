@@ -56,7 +56,7 @@ a {
   background-color: $COLOR-BACKGROUND;
 }
 
-.page-0-content, .page-1-content, .page-3-content {
+.page-content {
   width: 100%;
   height: 100%;
   padding: 0;
@@ -66,31 +66,64 @@ a {
   justify-content: center;
   box-sizing: border-box;
   
-  .page-1-container {
+  .index-container {
     width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
     box-sizing: border-box;
 
-    .page-1-fill {
-      width: 14%;
-      box-sizing: border-box;
-    }
-    .page-1-image {
+    .index-image {
       width: 66%;
+      margin: 0;
       box-sizing: border-box;
     }
-    .page-1-arrows-container {
+
+    .index-arrows-container {
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      width: calc((100% - 14%) - 66%);
+      width: 20%;
       height: 100%;
       box-sizing: border-box;
     }
   }
 
-  .page-3-container {
+  .signup-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+
+    .signup-text {
+      text-align: center;
+    }
+
+    .signup-form {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-end;
+      text-align: center;
+      margin-top: 50px;
+
+      label {
+        text-transform: uppercase;
+        text-align: right;
+      }
+
+      input {
+        width: 50%;
+        margin: 0 40px;
+        border: 0;
+        line-height: 1.7;
+      }
+    }
+  }
+
+  .thankyou-container {
     width: 25%;
     min-width: 300px;
     display: flex;
@@ -99,7 +132,7 @@ a {
     align-items: baseline;
     box-sizing: border-box;
 
-    .page-3-thankyou {
+    .thankyou-text {
       width: 80%;
       height: 100%;
       min-width: 260px;
@@ -109,15 +142,9 @@ a {
       text-align: right;
       text-transform: uppercase;
     }
-
-    .page-3-logo {
-      width: 20%;
-      padding-bottom: calc((233 / 177) * 20%);
-      background-image: url({{ site.baseurl }}/imgs/logo.svg);
-    }
   }
 
-  .page-0-image, .page-1-image, .page-1-arrows-image, .page-3-logo {
+  .index-image, .index-arrows-image, .thankyou-image, .signup-button-image {
     margin: 0 auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -126,23 +153,32 @@ a {
     box-sizing: border-box;
   }
 
-  .page-0-image {
-    width: 7%;
-    padding-bottom: calc((233 / 177) * 7%);
-    background-image: url({{ site.baseurl }}/imgs/logo.svg);
-  }
-
-  .page-1-image {
+  .index-image {
     width: 70%;
     padding-bottom: calc((270 / 2350) * 70%);
     background-image: url({{ site.baseurl }}/imgs/title.svg);
   }
 
-  .page-1-arrows-image {
+  .index-arrows-image {
     width: 20%;
     margin: 0;
     padding-bottom: calc((55 / 107) * 20%);
     margin-left: 20%;
     background-image: url({{ site.baseurl }}/imgs/arrows.svg);
+  }
+
+  .signup-button-image {
+    cursor: pointer;
+    margin: 0;
+    width: 10%;
+    padding-bottom: 24px;
+    background-image: url({{ site.baseurl }}/imgs/arrows.svg);
+    background-position: left bottom;
+  }
+
+  .thankyou-image {
+    width: 20%;
+    padding-bottom: calc((233 / 177) * 20%);
+    background-image: url({{ site.baseurl }}/imgs/logo.svg);
   }
 }
