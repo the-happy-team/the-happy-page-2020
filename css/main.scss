@@ -109,13 +109,21 @@ a {
       text-align: center;
     }
 
+    .signup-error {
+      margin-top: 50px;
+      opacity: 0;
+      color: darkred;
+      font-size: 13px;
+      text-align: center;
+      padding-bottom: 8px;
+    }
+
     .signup-form {
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: flex-end;
       text-align: center;
-      margin-top: 50px;
 
       label {
         text-transform: uppercase;
@@ -125,8 +133,13 @@ a {
       input {
         width: 50%;
         margin: 0 40px;
+        padding: 2px 6px;
         border: 0;
         line-height: 1.7;
+
+        &:focus {
+          outline:none;
+        }
       }
     }
   }
@@ -203,4 +216,10 @@ a {
       padding-bottom: calc((233 / 177) * 10%);
     }
   }
+}
+
+#mc_embed_signup {
+  position: absolute;
+  top: -1000px;
+  left: 50%;
 }
