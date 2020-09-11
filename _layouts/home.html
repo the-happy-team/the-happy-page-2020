@@ -5,7 +5,13 @@
   </head>
   <body>
     <div class="home-wrapper">
-      {{ content }}
+      {% if page.url contains "thankyou" %}
+        {% include thankyou.html %}
+      {% elsif page.url contains "signup" %}
+        {% include signup.html %}
+      {% else %}
+        {% include index.html %}
+      {% endif %}
     </div>
   </body>
 </html>
