@@ -1,6 +1,6 @@
 const txts = [
   'thank you',
-  'obrigado'
+  'obrigada'
 ];
 
 function changeThankYou() {
